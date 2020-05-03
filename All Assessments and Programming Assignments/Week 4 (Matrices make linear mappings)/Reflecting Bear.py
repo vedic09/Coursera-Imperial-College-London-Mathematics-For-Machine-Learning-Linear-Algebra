@@ -14,6 +14,6 @@ def build_reflection_matrix(bearBasis) : # The parameter bearBasis is a 2×2 mat
                     [0, -1]])
     # Combine the matrices E and TE to produce your transformation matrix.
     #T = E*TE*transpose(E)
-    T = E @ TE @ transpose(E)
+    T = E @ TE @ inv(E)
     # Finally, we return the result. There is no need to change this line.
     return T
